@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, Navigate, useNavigate}from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
-import {
-
-  IconButton,
-  InputAdornment,
-  TextField,
- 
-} from "@material-ui/core";
+import { IconButton, InputAdornment, TextField } from "@material-ui/core";
 import { Search } from "@material-ui/icons";
 
 const useDebounce = (value, delay) => {
@@ -32,7 +26,6 @@ const SearchBar = () => {
   const [result, setResult] = useState([]);
   const navigate = useNavigate();
 
-  // Adjust the delay according to your needs (e.g., 200 milliseconds)
   const debouncedSearchTerm = useDebounce(searchTerm, 200);
 
   useEffect(() => {
@@ -59,29 +52,26 @@ const SearchBar = () => {
     }
   }, [debouncedSearchTerm, navigate]);
 
-  return (  
+  return (
     <>
-  <TextField
-    size="small"
-    label="Type any book here"
-    variant="filled"
-    value={searchTerm}
-    onChange={(e) => setSearch(e.target.value)}
-    InputProps={{
-      endAdornment: (
-        <InputAdornment position="end">
-          <IconButton>
-            <Search />
-          </IconButton>
-        </InputAdornment>
-      ),
-    }}
-  />
- 
+      <TextField
+        size="small"
+        label="Type any book here"
+        variant="filled"
+        value={searchTerm}
+        onChange={(e) => setSearch(e.target.value)}
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="end">
+              <IconButton>
+                <Search />
+              </IconButton>
+            </InputAdornment>
+          ),
+        }}
+      />
     </>
-  
+  );
+};
 
-);
-}
- 
 export default SearchBar;
