@@ -1,0 +1,34 @@
+.mySwiper {
+  width: 80%;
+}
+
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  color: #937dc2;
+  --swiper-navigation-size: 24px;
+  border: 1px solid #937dc2;
+  border-radius: 50%;
+  padding: 5px 8px;
+}
+
+.swiper {
+  padding: 3%;
+}
+.css-o69gx8-MuiCardMedia-root {
+  object-fit: initial;
+}
+
+.mySwiper .swiper-pagination-bullet {
+  background-color: #636265;
+  width: 12px;
+  height: 12px;
+  position: relative;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: #937dc2;
+}
+.swiper-container-wrapper {
+  margin: 0 20px;
+  padding: 0 0 7% 0;
+}
